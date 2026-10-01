@@ -16,7 +16,7 @@ let app = createApp({
                 "Convex Polygons",
                 "Name"
             ]),
-            slide_idx: ref(3),
+            slide_idx: ref(0),
             curve_sections: ref(12),
             show_points: ref(false)
         };
