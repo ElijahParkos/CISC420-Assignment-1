@@ -77,106 +77,184 @@ class Renderer {
 
     // framebuffer:  canvas ctx image data
     drawSlide2(framebuffer) {
+        const green = [44,163,79,255];
+        const blue = [160,229,249,255];
+        const yellow = [246, 172, 0, 255];
+        const orange = [237, 76, 0, 255];
+        const brown = [174, 75, 18, 255];
+
         //Background
         let point_list = [{x: 0, y: 48}, {x: 800, y: 48}, {x: 800, y: 150}, {x: 0, y: 150}];
-        this.drawConvexPolygon(point_list, [44,163,79,255], framebuffer);
+        this.drawConvexPolygon(point_list, green, framebuffer);
         point_list = [{x: 0, y: 150}, {x: 800, y: 150}, {x: 800, y: 600}, {x: 0, y: 600}]
-        this.drawConvexPolygon(point_list, [160,229,249,255], framebuffer);
+        this.drawConvexPolygon(point_list, blue, framebuffer);
 
         //Sun
         point_list = [{x: 140, y: 500}, {x: 125, y: 535}, {x: 90, y: 550}, {x: 55, y: 535}, {x: 40, y: 500}, {x: 55, y: 465}, {x: 90, y: 450}, {x: 125, y: 465}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 140, y: 500}, {x: 125, y: 535}, {x: 163, y: 530}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 90, y: 550}, {x: 125, y: 535}, {x: 120, y: 573}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 90, y: 550}, {x: 55, y: 535}, {x: 60, y: 573}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 40, y: 500}, {x: 55, y: 535}, {x: 17, y: 530}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 40, y: 500}, {x: 55, y: 465}, {x: 17, y: 470}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 90, y: 450}, {x: 55, y: 465}, {x: 59, y: 427}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 90, y: 450}, {x: 125, y: 465}, {x: 120, y: 427}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 140, y: 500}, {x: 125, y: 465}, {x: 163, y: 470}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
 
         //Duck
         point_list = [{x: 225, y: 150}, {x: 275, y: 150}, {x: 250, y: 195}];
-        this.drawConvexPolygon(point_list, [237, 76, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, orange, framebuffer);
         point_list = [{x: 275, y: 150}, {x: 325, y: 150}, {x: 300, y: 195}];
-        this.drawConvexPolygon(point_list, [237, 76, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, orange, framebuffer);
         point_list = [{x: 300, y: 195}, {x: 250, y: 195}, {x: 225, y: 250}, {x:275, y: 250}, {x: 330, y: 280}];
-        this.drawConvexPolygon(point_list, [246, 172, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, yellow, framebuffer);
         point_list = [{x: 330, y: 280}, {x: 375, y: 300}, {x: 415, y: 300}, {x: 370, y: 280}];
-        this.drawConvexPolygon(point_list, [237, 76, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, orange, framebuffer);
 
         //Stand
         point_list = [{x: 525, y: 150}, {x: 775, y: 150}, {x: 775, y: 250}, {x: 525, y: 250}];
-        this.drawConvexPolygon(point_list, [174, 75, 18, 255], framebuffer);
+        this.drawConvexPolygon(point_list, brown, framebuffer);
         point_list = [{x: 525, y: 350}, {x: 775, y: 350}, {x: 775, y: 425}, {x: 525, y: 425}];
-        this.drawConvexPolygon(point_list, [174, 75, 18, 255], framebuffer);
+        this.drawConvexPolygon(point_list, brown, framebuffer);
         point_list = [{x: 525, y: 350}, {x: 535, y: 350}, {x: 535, y: 250}, {x: 525, y: 250}];
-        this.drawConvexPolygon(point_list, [174, 75, 18, 255], framebuffer);
+        this.drawConvexPolygon(point_list, brown, framebuffer);
         point_list = [{x: 765, y: 350}, {x: 775, y: 350}, {x: 775, y: 250}, {x: 765, y: 250}];
-        this.drawConvexPolygon(point_list, [174, 75, 18, 255], framebuffer);
+        this.drawConvexPolygon(point_list, brown, framebuffer);
     }
 
     // framebuffer:  canvas ctx image data
     drawSlide3(framebuffer) {
+        const main_color = [75,75,75,255];
+        const secondary_color = [0,0,0,255];
+        
         // E
         let point_list = [{x: 10, y:500}, {x: 110, y:500}, {x: 110, y: 465}, {x: 10, y:465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 10, y:300}, {x: 110, y:300}, {x: 110, y: 265}, {x: 10, y:265}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 10, y:465}, {x: 10, y:300}, {x: 45, y: 300}, {x: 45, y:465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 45, y:397}, {x: 80, y:397}, {x: 80, y: 366}, {x: 45, y:366}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
+
+        point_list = [{x:110, y:265}, {x: 90, y: 245}, {x:10, y: 245}, {x:10, y:265}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:0, y:490}, {x: 10, y: 500}, {x:10, y: 245}, {x:0, y:245}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:80, y:366}, {x: 60, y: 346}, {x:45, y: 346}, {x:45, y:366}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:110, y:465}, {x: 90, y: 445}, {x:45, y: 445}, {x:45, y:465}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
 
         // L
         point_list = [{x: 150, y:500}, {x: 150, y:300}, {x: 185, y: 300}, {x: 185, y:500}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 150, y:300}, {x: 250, y:300}, {x: 250, y: 265}, {x: 150, y:265}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
+
+        point_list = [{x:250, y:265}, {x: 230, y: 245}, {x:150, y: 245}, {x:150, y:265}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:150, y:245}, {x: 130, y: 245}, {x:130, y: 480}, {x:150, y:500}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
         
         // I
         point_list = [{x: 280, y:300}, {x: 380, y:300}, {x: 380, y: 265}, {x: 280, y:265}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 280, y:500}, {x: 380, y:500}, {x: 380, y: 465}, {x: 280, y:465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 315, y:465}, {x: 315, y:300}, {x: 345, y: 300}, {x: 345, y:465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
+
+        point_list = [{x:380, y:265}, {x: 360, y: 245}, {x: 280, y: 245}, {x:280, y:265}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:280, y:300}, {x: 260, y: 280}, {x:260, y: 245}, {x:280, y:245}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:280, y:500}, {x: 260, y: 480}, {x:260, y: 445}, {x:280, y:445}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:280, y:465}, {x: 295, y: 465}, {x:295, y: 445}, {x:280, y:445}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:295, y:465}, {x: 315, y: 465}, {x:315, y: 300}, {x:295, y:300}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:380, y:465}, {x: 360, y: 445}, {x:345, y: 445}, {x:345, y:465}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
 
         // J
+        point_list = [{x:410, y:500}, {x: 390, y: 480}, {x:390, y: 445}, {x:410, y:445}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:510, y:465}, {x: 490, y: 445}, {x:410, y: 445}, {x:410, y:465}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:430, y:445}, {x: 445, y: 370}, {x:465, y: 370}, {x:465, y:445}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:445, y:370}, {x: 435, y: 300}, {x:480, y: 370}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:390, y:280}, {x: 390, y: 245}, {x:410, y: 245}, {x:410, y:300}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:410, y:245}, {x: 410, y: 265}, {x: 490, y:355}, {x:475, y: 285}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+
         point_list = [{x: 410, y:500}, {x: 510, y:500}, {x: 510, y: 465}, {x: 410, y:465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 445, y:465}, {x: 465, y:370}, {x: 495, y: 370}, {x: 475, y:465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 465, y:370}, {x: 495, y: 370}, {x: 470, y:300}, {x: 445, y: 325}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x:410, y:300}, {x: 445, y:325}, {x: 470, y: 300}, {x: 410, y:265}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
+        
+        
 
         // A
+        point_list = [{x:550, y:500}, {x: 530, y: 480}, {x: 490, y:245}, {x:510, y: 245}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:545, y:265}, {x: 525, y: 245}, {x: 510, y:245}, {x:510, y: 265}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:600, y:480}, {x: 600, y: 346}, {x: 550, y:346}, {x:550, y: 480}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:615, y:265}, {x: 595, y: 245}, {x: 630, y:245}, {x:650, y: 265}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:595, y:245}, {x: 580, y: 346}, {x: 625, y:346}, {x:625, y: 265}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+
         point_list = [{x: 550, y:500}, {x: 510, y:265}, {x: 545, y: 265}, {x:580, y:465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 610, y:500}, {x: 650, y:265}, {x: 615, y: 265}, {x:580, y:465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 550, y:500}, {x: 610, y:500}, {x: 580, y: 465}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 550, y:397}, {x: 620, y:397}, {x: 620, y: 366}, {x: 550, y:366}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
+        
 
         // H
+        point_list = [{x:670, y:500}, {x: 650, y: 480}, {x: 650, y:245}, {x:670, y: 245}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:670, y:245}, {x: 670, y: 265}, {x: 705, y:265}, {x:685, y: 245}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:670, y:500}, {x: 650, y: 480}, {x: 650, y:245}, {x:670, y: 245}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:755, y:500}, {x: 735, y: 480}, {x: 735, y:245}, {x:755, y: 245}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:755, y:245}, {x: 755, y: 265}, {x: 790, y:265}, {x:770, y: 245}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+        point_list = [{x:755, y:366}, {x: 705, y: 366}, {x: 705, y:346}, {x:755, y: 346}];
+        this.drawConvexPolygon(point_list, secondary_color, framebuffer);
+
         point_list = [{x: 670, y:500}, {x: 670, y:265}, {x: 705, y: 265}, {x: 705, y:500}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 755, y:500}, {x: 755, y:265}, {x: 790, y: 265}, {x: 790, y:500}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
         point_list = [{x: 705, y:397}, {x: 755, y:397}, {x: 755, y: 366}, {x: 705, y:366}];
-        this.drawConvexPolygon(point_list, [0, 0, 0, 255], framebuffer);
+        this.drawConvexPolygon(point_list, main_color, framebuffer);
+
+        
     }
 
     // p0:           object {x: __, y: __}
